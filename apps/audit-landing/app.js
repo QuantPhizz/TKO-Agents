@@ -11,6 +11,24 @@ const nextAction = document.getElementById("nextAction");
 const bookLink = document.getElementById("bookLink");
 const buyLink = document.getElementById("buyLink");
 
+let currentLeadId = null;
+
+function trackCtaClick() {
+  if (!currentLeadId) return;
+
+  fetch("/.netlify/functions/lead-event", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      leadId: currentLeadId,
+      event: "cta_clicked"
+    })
+  }).catch(() => {});
+}
+
+bookLink.addEventListener("click", trackCtaClick);
+buyLink.addEventListener("click", trackCtaClick);
+
 // TODO: Replace with your real links (Calendly + Stripe)
 const LINKS = {
   book: "https://calendly.com/",
@@ -104,6 +122,8 @@ form.addEventListener("submit", async (e) => {
     if (!res.ok) throw new Error(text || `HTTP ${res.status}`);
 
 const json = JSON.parse(text);
+currentLeadId = json.leadId;
+const out = json.data;
 
 if (!json.ok) {
   throw new Error(json.error || "audit_failed");
@@ -118,7 +138,18 @@ nextAction.textContent = out.nextAction || "—";
 
 pickCta(out.recommendedTier);
 
-    results.classList.remove("hidden");
+    results.classList.remove("hidden"); 
+if (currentLeadId) {
+  fetch("/.netlify/functions/lead-event", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      leadId: currentLeadId,
+      event: "audit_viewed"
+    })
+  }).catch(() => {});
+}
+
     setStatus("Done.");
   } catch (err) {
     console.error(err);
