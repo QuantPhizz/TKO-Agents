@@ -123,6 +123,7 @@ form.addEventListener("submit", async (e) => {
 
 const json = JSON.parse(text);
 currentLeadId = json.leadId;
+console.log("Lead ID:", currentLeadId);
 const out = json.data;
 
 if (!json.ok) {
