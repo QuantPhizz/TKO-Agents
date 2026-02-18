@@ -129,8 +129,6 @@ if (!json.ok) {
   throw new Error(json.error || "audit_failed");
 }
 
-const out = json.data;
-
 fillList(problems, out.problems);
 fillList(quickWins, out.quickWins);
 tier.textContent = out.recommendedTier || "—";
