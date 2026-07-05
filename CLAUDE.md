@@ -33,11 +33,11 @@ Known agent projects in this ecosystem (update as projects are added):
                   local tko-agents tree 2026-07-04. See its Tier 3
                   CLAUDE.md for live topology and locked risk params.
 
-  Operation Contesseract/ — Single-file three.js visualization (5^4
+  Operation Tessa/ — Single-file three.js visualization (5^4
                   tesseract context-placement model). No shared state with
                   any other project. Own repo:
-                  github.com/QuantPhizz/Operation-Contesseract. Live on
-                  Cloudflare Pages: https://operation-contesseract.pages.dev.
+                  github.com/QuantPhizz/Operation-Tessa. Live on
+                  Cloudflare Pages: https://operation-tessa.pages.dev.
 
 # ---------------------------------------------------------------
 # ADD OTHER AGENT PROJECT NAMES AND DESCRIPTIONS HERE AS CREATED.
