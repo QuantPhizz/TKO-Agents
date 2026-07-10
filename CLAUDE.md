@@ -39,6 +39,13 @@ Known agent projects in this ecosystem (update as projects are added):
                   github.com/QuantPhizz/Operation-Tessa. Live on
                   Cloudflare Pages: https://operation-tessa.pages.dev.
 
+  Prophet Council/ — Polymarket multi-agent trading desk (handed off as
+                  "polydesk"). Three runtime LLM personas (Kisuke/Fable 5,
+                  Aizen/Sonnet 5, Gojo/Grok 4.5) + Haiku triage; paper
+                  trading by default, cron 6x/day. Own repo:
+                  github.com/QuantPhizz/Prophet-Council. See its Tier 3
+                  CLAUDE.md; personas are runtime files, NOT subagents.
+
 # ---------------------------------------------------------------
 # ADD OTHER AGENT PROJECT NAMES AND DESCRIPTIONS HERE AS CREATED.
 # Format:
