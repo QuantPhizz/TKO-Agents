@@ -46,6 +46,14 @@ Known agent projects in this ecosystem (update as projects are added):
                   github.com/QuantPhizz/Prophet-Council. See its Tier 3
                   CLAUDE.md; personas are runtime files, NOT subagents.
 
+  Storm HQ/    — Local agent headquarters (Tauri cockpit + TypeScript
+                  daemon). Legend conductor + Thor/Sinbad/Yoruichi/
+                  Kakashi/Killua. Mission slots at
+                  ~/FTG-TKO-missions/slot-{1..6}. Local home ~/storm-hq.
+                  GitHub: github.com/QuantPhizz/Storm-HQ (private,
+                  owner-gated create/push). Own Tier 3 CLAUDE.md in that
+                  repo. Isolated; does not replace Cursor/Antigravity.
+
 # ---------------------------------------------------------------
 # ADD OTHER AGENT PROJECT NAMES AND DESCRIPTIONS HERE AS CREATED.
 # Format:
