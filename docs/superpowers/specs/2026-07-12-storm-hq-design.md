@@ -27,11 +27,14 @@ mission slots for isolated execution.
 | Thor     | Deep-logic / core-IP apex              | claude-opus-4-8 · Vertex us-east5 (`thor-d` = direct)  | claude-agent-sdk |
 | Sinbad   | Creative apex (highest creative authority) | claude-fable-5 · Vertex global (1M ctx / 128K out) | claude-agent-sdk |
 | Yoruichi | Features / broad implementation        | claude-sonnet-5 · Vertex global (1M ctx)               | claude-agent-sdk |
-| Kakashi  | Deep work via Cursor runtime           | Cursor API key (moving off `agy`)                      | cursor-sdk       |
+| Kakashi  | Deep work via Cursor runtime           | Cursor API key (moving off `agy`); Grok 4.5 available at all effort levels | cursor-sdk       |
 | Killua   | Fast iteration / high volume           | Gemini 3.5 Flash via Antigravity CLI (`agy`)           | pty (legacy)     |
 
 Also enabled on Vertex and part of the allowlist: claude-opus-4-7,
-claude-opus-4-6, claude-haiku-4-5.
+claude-opus-4-6, claude-sonnet-4-6, claude-haiku-4-5.
+
+Also on the allowlist (Cursor API key route): grok-4-5 at all effort levels
+(effort is a Cursor SDK model parameter, not a separate allowlist entry).
 
 ## 3. Authority model
 
@@ -61,7 +64,8 @@ two-layer:
    get the equivalent via Cursor hooks.
 
 Allowlist seeds: all roster default models plus opus-4-7, opus-4-6,
-haiku-4-5, plus every entry added to the shared MCP library (auto-seeded).
+sonnet-4-6, haiku-4-5, grok-4-5 (cursor route), plus every entry added to
+the shared MCP library (auto-seeded).
 Adding a new model/tool/MCP to any specialist requires putting it on
 Legend's allowlist first. Widening the allowlist is an owner-gated action.
 
@@ -177,8 +181,8 @@ still pass the Legend ceiling.
 Legend model toggle: takes effect at the next turn boundary; every switch is
 logged to telemetry. In v1 Legend runs on the claude-agent-sdk adapter, so
 the toggle covers the full allowlisted Claude family on Vertex (opus-4-8,
-opus-4-7, opus-4-6, sonnet-5, fable-5, haiku-4-5). Toggling Legend onto
-Gemini (AGY route) or Cursor-routed models requires those adapters to host
+opus-4-7, opus-4-6, sonnet-5, sonnet-4-6, fable-5, haiku-4-5). Toggling Legend onto
+Gemini (AGY route) or Cursor-routed models (including grok-4-5) requires those adapters to host
 Legend and is deferred past v1; both stay on the allowlist as specialist
 routes and remain part of the ceiling.
 
