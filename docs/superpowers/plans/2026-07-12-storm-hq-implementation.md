@@ -12,6 +12,10 @@
 
 **Mission slots (existing):** `~/FTG-TKO-missions/slot-{1..6}` → FTG-TKO worktrees
 
+**Homes (locked):**
+- Local: `/Users/shugogeta/storm-hq` (`~/storm-hq`)
+- GitHub: `QuantPhizz/Storm-HQ` (private; create/push is owner-gated)
+
 ---
 
 ## File map (repo `storm-hq`)

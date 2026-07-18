@@ -25,6 +25,9 @@ logs/
 # OS
 .DS_Store
 
+# Brainstorm / visual companion session artifacts
+.superpowers/
+
 # Nested project repos — each has its own GitHub repo (Tier 2 CLAUDE.md:
 # one repo per project; this repo is the ecosystem/agent-platform layer only)
 FTG-TKO/
