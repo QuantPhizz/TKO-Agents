@@ -2,8 +2,13 @@ name = "tko-agent-gateway"
 main = "src/index.js"
 compatibility_date = "2026-02-01"
 
-[vars]
-TKO_GATEWAY_TOKEN = "FTG-TKO-10noARASHI2026"
+# Secrets are set in Cloudflare and must NOT go in this file:
+#   wrangler secret put TKO_GATEWAY_TOKEN
+#   wrangler secret put OPENAI_API_KEY
 
 [ai]
 binding = "AI"
+
+[[kv_namespaces]]
+binding = "LEADS_KV"
+id = "7f0503acc4254dcfbb1eb9ff6a3b0aa2"
